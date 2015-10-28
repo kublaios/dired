@@ -1,0 +1,4 @@
+[
+    { "caption": "dired", "command": "dired" },
+    { "caption": "dired: Goto Anywhere", "command": "dired_goto_anywhere", "args":{"new_view": true} },
+]

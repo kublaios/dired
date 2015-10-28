@@ -1,0 +1,35 @@
+{
+    "name": "dired", 
+    "patterns": [
+        {
+            "match": "^(\\S.*(\\\\|/))$", 
+            "name": "storage.type.dired.item.directory, dired.item.directory"
+        }, 
+        {
+            "match": "^(\\S.*\\.(exe|dll|out))$", 
+            "name": "entity.name.function.dired.item.exe"
+        }, 
+        // {
+        //     "match": "^(\\S.*)$", 
+        //     "name": "dired.item.file"
+        // }, 
+        {
+            "match": "^ (\\S+) =.+$", 
+            "name": "comment.dired.help", 
+            "captures": {
+                "1": {
+                    "name": "string.other.dired.key"
+                }
+            }
+        }, 
+        {
+            "match": "^ Rename files by editing.*$", 
+            "name": "comment.dired.help"
+        }
+    ], 
+    "uuid": "638375b8-3509-4d37-a8d8-afad7a95b428", 
+    "scopeName": "text.dired", 
+    "fileTypes": [
+        "dired"
+    ]
+}

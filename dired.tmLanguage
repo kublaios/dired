@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>dired</string>
+	</array>
+	<key>name</key>
+	<string>dired</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>^(\S.*(\\|/))$</string>
+			<key>name</key>
+			<string>storage.type.dired.item.directory, dired.item.directory</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^(\S.*\.(exe|dll|out))$</string>
+			<key>name</key>
+			<string>entity.name.function.dired.item.exe</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.other.dired.key</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^ (\S+) =.+$</string>
+			<key>name</key>
+			<string>comment.dired.help</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^ Rename files by editing.*$</string>
+			<key>name</key>
+			<string>comment.dired.help</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.dired</string>
+	<key>uuid</key>
+	<string>638375b8-3509-4d37-a8d8-afad7a95b428</string>
+</dict>
+</plist>
