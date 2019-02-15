@@ -37,6 +37,19 @@ following are available:
 If there are marked files, operations only affect those files.  Otherwise files in selections
 or with cursors on them are affected.  This works nicely with multiple cursors and selections.
 
+### Immediate
+
+The `dired` command accepts the argument `immediate`, which immediately displays a directory
+without prompting.  The directory displayed will be that of the current view or the first
+project folder, or if neither of these are available, the user’s home directory.
+
+This also allows the plugin to be used from the command line or integrated with a file browser
+etc., e.g.
+
+```
+subl --command 'dired {"immediate": true}' "/path/to/folder"
+```
+
 ### Rename
 
 The rename command puts the view into "rename mode".  The view is made editable so files can be
