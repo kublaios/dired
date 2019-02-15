@@ -57,8 +57,11 @@ class DiredCommand(WindowCommand):
     """
     Prompt for a directory to display and display it.
     """
-    def run(self):
-        prompt.start('Directory:', self.window, self._determine_path(), self._show)
+    def run(self, **args):
+        if args.get('immediate', False):
+            show(self.window, self._determine_path())
+        else:
+            prompt.start('Directory:', self.window, self._determine_path(), self._show)
 
     def _show(self, path):
         show(self.window, path)
