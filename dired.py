@@ -517,11 +517,11 @@ class DiredPreviewCloseCommand(TextCommand, DiredBaseCommand):
 class DiredPreviewEventListener(EventListener, DiredBaseCommand):
     def on_selection_modified(self, view):
         self.view = view
-        if 'text.dired' in self.view.scope_name(self.view.sel()[0].a) :
-            if self.view.settings().get('preview_key') :
+        selections = self.view.sel()
+        if selections and len(selections) > 0 and 'text.dired' in self.view.scope_name(selections[0].a):
+            if self.view.settings().get('preview_key'):
                 path_list = get_path_list(self.path, self.get_selected(), False)
-
-                if path_list :
+                if path_list:
                     self.view.settings().set('preview_key', False)
                     self.view.window().run_command('dired_preview_refresh', {'path':path_list[0]})
                     self.view.settings().set('preview_key', True)
